@@ -1,0 +1,11 @@
+node_modules/
+test/
+docs/
+.env
+*.log
+*.jpg
+*.png
+dist/
+build/
+.git/
+package-lock.json/
