@@ -10,6 +10,16 @@ const Homepage = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleRSVPClick = () => {
+    alert('Redirecting to RSVP page...');
+    // Add navigation logic here, e.g., window.location.href = '/rsvp';
+  };
+
+  const handleRegistryClick = () => {
+    alert('Redirecting to Wedding Registry...');
+    // Add navigation logic here, e.g., window.location.href = '/registry';
+  };
+
   return (
     <>
       <div className={styles.navbar}>
@@ -49,27 +59,24 @@ const Homepage = () => {
         </div>
       </div>
 
+      {/* RSVP and Registry Section */}
       <div className={styles.rsvpRegistrySection}>
-        <div className={styles.panel}>
+        <div className={styles.panel} onClick={handleRSVPClick}>
           <h2>RSVP</h2>
         </div>
-        <div className={styles.panel}>
+        <div className={styles.panel} onClick={handleRegistryClick}>
           <h2>Wedding Registry</h2>
         </div>
       </div>
 
-      <div className={styles.buttonContainer}>
-        <button className={styles.button}>RSVP Now</button>
-        <button className={styles.button}>View Registry</button>
-      </div>
-
+      {/* Timeline Section */}
       <div className={styles.timeline}>
         <div className={styles.timelineItem}>
           <div className={styles.timelineDot}></div>
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineContent}>
             <h3>Ceremony</h3>
-            <p>3:00 PM - Join us for our vows at the beautiful garden venue.</p>
+            <p>3:00 PM - Join us for our vows....</p>
           </div>
         </div>
 
@@ -78,7 +85,7 @@ const Homepage = () => {
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineContent}>
             <h3>Cocktail Hour</h3>
-            <p>4:00 PM - Enjoy drinks and hors d'oeuvres with friends and family.</p>
+            <p>4:00 PM - Enjoy drinks and snacks with friends and family.....</p>
           </div>
         </div>
 
@@ -87,7 +94,7 @@ const Homepage = () => {
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineContent}>
             <h3>Reception</h3>
-            <p>5:30 PM - Celebrate with us over dinner, dancing, and laughter!</p>
+            <p>5:30 PM - Celebrate with us over dinner, dancing, and more....</p>
           </div>
         </div>
 
@@ -96,7 +103,7 @@ const Homepage = () => {
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineContent}>
             <h3>Farewell</h3>
-            <p>10:00 PM - Send-off as we start our new journey together.</p>
+            <p>10:00 PM - Send-off as we start our new journey together....</p>
           </div>
         </div>
       </div>

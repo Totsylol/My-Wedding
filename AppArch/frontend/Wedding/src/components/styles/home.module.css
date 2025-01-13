@@ -49,46 +49,56 @@
 /* RSVP and Registry Section */
 .rsvpRegistrySection {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* Space out the panels evenly */
   padding: 20px;
-  background-color: #c8b8a6;
+  background-color: #c8b8a6; /* Section background color */
 }
 
+/* RSVP and Registry Section */
 .panel {
   width: 40%;
   padding: 20px;
-  background-color: #c8b8a6; 
+  background-color: #ffffff;
   text-align: center;
+  border-radius: 10px;
+  border: 2px solid #c8b8a6;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .panel h2 {
   font-size: 2rem;
-  color: #ffffff;
   font-family: 'Dancing Script', cursive;
+  margin: 0;
+  color: #c8b8a6;
+  position: relative; /* Needed for underline animation */
+  display: inline-block; /* Ensures underline is properly aligned */
 }
 
-/* Buttons */
+.panel h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Space between text and underline */
+  width: 0;
+  height: 2px;
+  background: #c8b8a6;
+  transition: width 0.3s ease; /* Smooth animation for the underline */
+}
+
+.panel:hover h2::after {
+  width: 100%; /* Full width on hover */
+}
+
+
+
+/* Remove original button container */
 .buttonContainer {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  background-color: #c8b8a6;
+  display: none; /* Hide the original button container */
 }
 
-.button {
-  background-color: #c8b8a6;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  margin: 0 10px;
-}
-
-.button:hover {
-  background-color: #d9c4ad;
-  transition: background-color 0.3s ease;
-}
 /* Timeline Section */
 .timeline {
   display: flex;
