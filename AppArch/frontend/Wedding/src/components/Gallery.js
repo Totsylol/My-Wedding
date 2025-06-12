@@ -67,7 +67,6 @@ const Gallery = ({ setLightboxOpen }) => {
 
   return (
     <div className={styles.galleryPage}>
-      <h1 className={styles.title}>Gallery</h1>
 
       <div className={styles.galleryGrid}>
         {photos.map((photo, index) => (
@@ -86,15 +85,22 @@ const Gallery = ({ setLightboxOpen }) => {
         ))}
       </div>
 
-      {/* Lightbox for Enlarged Photo */}
       {currentPhoto && (
-        <div className={styles.lightbox}>
-          <img src={currentPhoto} alt="Enlarged Engagement Photo" />
-          <button className={styles.closeButton} onClick={closeLightbox}>
-            &times;
-          </button>
-        </div>
-      )}
+  <div
+    className={styles.lightbox}
+    onClick={closeLightbox} // Clicking background will close
+  >
+    <img
+      src={currentPhoto}
+      alt="Enlarged Engagement Photo"
+      onClick={(e) => e.stopPropagation()} // Prevent closing when image is clicked
+    />
+    <button className={styles.closeButton} onClick={closeLightbox}>
+      &times;
+    </button>
+  </div>
+)}
+    
     </div>
   );
 };

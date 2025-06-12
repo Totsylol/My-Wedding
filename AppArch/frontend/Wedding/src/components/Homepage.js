@@ -11,15 +11,18 @@ const Homepage = () => {
   };
 
   const handleRSVPClick = () => {
-    alert('Redirecting to RSVP page...');
-    // Add navigation logic here, e.g., window.location.href = '/rsvp';
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLSdwwdOb40TXGG6wtD6t-9Sx-DyzSvwsDxo7q8UDblFn6PrOeg/viewform?usp=header',
+      '_blank'
+    );
   };
 
   const handleRegistryClick = () => {
-    alert('Redirecting to Wedding Registry...');
-    // Add navigation logic here, e.g., window.location.href = '/registry';
+    window.open(
+      'https://www.amazon.com/wedding/registry/K9APEWYGL6A4',
+      '_blank'
+    );
   };
-
   return (
     <>
       <div className={styles.navbar}>

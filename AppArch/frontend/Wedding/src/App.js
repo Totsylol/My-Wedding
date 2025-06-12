@@ -4,6 +4,9 @@ import Homepage from "./components/Homepage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
+import WeddingParty from "./components/WeddingParty";
+import OurStory from './components/OurStory';
+
 
 function App() {
   const [lightboxOpen, setLightboxOpen] = useState(false); // Control Navbar visibility
@@ -20,6 +23,12 @@ function App() {
           <Route path="/gallery">
             <Gallery setLightboxOpen={setLightboxOpen} /> {/* Pass setter to Gallery */}
           </Route>
+          <Route path="/wedding_party">
+        <WeddingParty />
+        </Route>
+        <Route path="/Our Story">
+      <Our Story />
+      </Route>
         </Switch>
         <Footer />
       </Router>

@@ -1,0 +1,53 @@
+.ourStoryPage {
+    padding: 100px 20px 50px 20px;
+    font-family: 'Dancing Script', cursive;
+    color: #c8b8a6;
+    background-color: #fff8f0;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 4rem;
+    margin-bottom: 40px;
+  }
+  
+  .storySection, .storySectionAlt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+  }
+  
+  .storySectionAlt {
+    flex-direction: row-reverse;
+  }
+  
+  .imageContainer {
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .textContent {
+    flex: 1 1 300px;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .textContent h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #f7c9a9;
+  }
+  
+  .textContent p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }

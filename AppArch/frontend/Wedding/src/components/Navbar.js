@@ -1,48 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './styles/navbar.module.css';
 
 const Navbar = () => {
   const [scrollDirection, setScrollDirection] = useState('visible');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
+  // Hide/show navbar on scroll
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setScrollDirection('hidden'); // Scrolling down
-      } else {
-        setScrollDirection('visible'); // Scrolling up
-      }
+      setScrollDirection(window.scrollY > lastScrollY ? 'hidden' : 'visible');
       lastScrollY = window.scrollY;
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isDropdownOpen]);
+
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen); // Toggle the dropdown
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   const closeDropdown = () => {
-    setIsDropdownOpen(false); // Close the dropdown
+    setIsDropdownOpen(false);
   };
 
   return (
     <nav className={`${styles.navbar} ${styles[scrollDirection]}`}>
-      {/* Hamburger Menu */}
-      <div
-        className={`${styles.hamburgerMenu} ${isDropdownOpen ? styles.open : ''}`}
-        onClick={toggleDropdown}
-      >
-        <span className={styles.hamburger}></span>
-        <span className={styles.hamburger}></span>
-        <span className={styles.hamburger}></span>
+      {/* Menu trigger */}
+      <div className={styles.menuWrapper} onClick={toggleDropdown}>
+        <span className={styles.menuText}>Menu</span>
       </div>
 
       {/* Title */}
@@ -54,11 +59,19 @@ const Navbar = () => {
 
       {/* RSVP Button */}
       <div className={styles.rsvpButtonContainer}>
-        <button className={styles.rsvpButton}>RSVP</button>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdwwdOb40TXGG6wtD6t-9Sx-DyzSvwsDxo7q8UDblFn6PrOeg/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.rsvpButton}
+        >
+          RSVP
+        </a>
       </div>
 
-      {/* Dropdown Menu */}
+      {/* Sliding Dropdown Menu */}
       <div
+        ref={dropdownRef}
         className={`${styles.hamburgerMenuDropdown} ${
           isDropdownOpen ? styles.open : ''
         }`}
@@ -66,23 +79,32 @@ const Navbar = () => {
         <button className={styles.closeButton} onClick={closeDropdown}>
           ←
         </button>
-        <Link to="/rsvp" onClick={closeDropdown} className={styles.dropdownButton}>
-          RSVP
+
+        <Link to="/" onClick={closeDropdown} className={styles.dropdownButton}>
+          Home
         </Link>
-        <Link
-          to="/registry"
-          onClick={closeDropdown}
+        <Link to="/Our Story" onClick={closeDropdown} className={styles.dropdownButton}>
+          Our Story
+        </Link>
+        <Link to="/wedding_party" onClick={closeDropdown} className={styles.dropdownButton}>
+          Wedding Party
+        </Link>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdwwdOb40TXGG6wtD6t-9Sx-DyzSvwsDxo7q8UDblFn6PrOeg/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.dropdownButton}
+        >
+          RSVP
+        </a>
+        <a
+          href="https://www.amazon.com/wedding/registry/K9APEWYGL6A4"
+          target="_blank"
+          rel="noopener noreferrer"
           className={styles.dropdownButton}
         >
           Wedding Registry
-        </Link>
-        <Link
-          to="/gallery"
-          onClick={closeDropdown}
-          className={styles.dropdownButton}
-        >
-          Gallery
-        </Link>
+        </a>
         <Link to="/info" onClick={closeDropdown} className={styles.dropdownButton}>
           More Info
         </Link>
