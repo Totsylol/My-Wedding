@@ -27,7 +27,7 @@ function App() {
         <WeddingParty />
         </Route>
         <Route path="/Our Story">
-      <Our Story />
+      <OurStory/>
       </Route>
         </Switch>
         <Footer />
