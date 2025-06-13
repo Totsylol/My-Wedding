@@ -7,10 +7,6 @@ const Homepage = () => {
   const [daysLeft, setDaysLeft] = useState(0);
 
   useEffect(() => {
-    const weddingDate = new Date('2025-09-07');
-    const today = new Date();
-    const diff = Math.ceil((weddingDate - today) / (1000 * 60 * 60 * 24));
-    setDaysLeft(diff);
   }, []);
 
   const handleRSVPClick = () => {
