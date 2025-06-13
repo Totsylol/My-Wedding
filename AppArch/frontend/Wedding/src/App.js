@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import WeddingParty from "./components/WeddingParty";
 import OurStory from './components/OurStory';
+import MoreInfo from './components/MoreInfo';
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
         <Route path="/Our Story">
       <OurStory/>
       </Route>
+      <Route path="/info">
+  <MoreInfo />
+</Route>
         </Switch>
         <Footer />
       </Router>

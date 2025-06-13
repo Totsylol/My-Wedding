@@ -12,8 +12,7 @@ const OurStory = () => {
         <div className={styles.textContent}>
           <h2>How We Met</h2>
           <p>
-            We first met in the most unexpected way — a moment that felt like it was meant to be.
-            What started as a casual conversation quickly turned into something special.
+          Text 
           </p>
         </div>
       </div>
@@ -22,8 +21,7 @@ const OurStory = () => {
         <div className={styles.textContent}>
           <h2>Our First Date</h2>
           <p>
-            From that first evening walk to endless shared laughter, our first date was
-            the beginning of a beautiful journey together.
+            Text
           </p>
         </div>
         <div className={styles.imageContainer}>
@@ -38,8 +36,7 @@ const OurStory = () => {
         <div className={styles.textContent}>
           <h2>The Proposal</h2>
           <p>
-            With a heart full of love and a ring in hand, the proposal was magical — a promise
-            of forever in the most beautiful setting.
+            Text
           </p>
         </div>
       </div>

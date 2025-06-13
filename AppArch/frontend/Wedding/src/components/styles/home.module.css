@@ -1,111 +1,105 @@
-/* General container */
-.container, .containerSwapped {
+/* Base */
+body {
+  font-family: 'Dancing Script', cursive;
+}
+
+.container,
+.containerSwapped {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  height: 100vh; /* Full viewport height */
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Prevents scrolling issues */
-  position: relative; /* For parallax positioning */
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Left and right image columns */
-.imageColumnLeft, .imageColumnRight {
-  height: 100%; /* Full height of the container */
-  width: 100%; /* Full width of the container */
+.imageColumnLeft,
+.imageColumnRight {
+  width: 100%;
+  height: 100%;
 }
 
-/* Images */
 .image {
-  height: 100%; /* Ensure full height of the container */
-  width: 100%; /* Ensure full width of the container */
-  object-fit: cover; /* Ensures the image fills the container without distortion */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Text section styling */
 .textSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px;
-  color: #c8b8a6;
   background-color: #ffffff;
+  color: #c8b8a6;
   text-align: center;
-  z-index: 1;
 }
 
-/* Text section titles */
 .textSection h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  font-family: 'Dancing Script', cursive; 
 }
 
 .textSection p {
   font-size: 1.2rem;
 }
 
-/* RSVP and Registry Section */
-.rsvpRegistrySection {
-  display: flex;
-  justify-content: space-around; /* Space out the panels evenly */
-  padding: 20px;
-  background-color: #c8b8a6; /* Section background color */
+/* Countdown */
+.countdownContainer {
+  text-align: center;
+  margin: 60px auto 20px;
 }
 
-/* RSVP and Registry Section */
+.countdownTitle {
+  font-size: 2.5rem;
+  color: #f7c9a9;
+}
+
+.countdownText {
+  font-size: 1.8rem;
+  color: #c8b8a6;
+  margin-top: 10px;
+}
+
+/* RSVP & Registry */
+.rsvpRegistrySection {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background-color: #c8b8a6;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .panel {
   width: 40%;
+  min-width: 200px;
   padding: 20px;
   background-color: #ffffff;
   text-align: center;
   border-radius: 10px;
   border: 2px solid #c8b8a6;
-  position: relative;
   cursor: pointer;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .panel h2 {
   font-size: 2rem;
-  font-family: 'Dancing Script', cursive;
-  margin: 0;
   color: #c8b8a6;
-  position: relative; /* Needed for underline animation */
-  display: inline-block; /* Ensures underline is properly aligned */
+  margin: 0;
 }
 
-.panel h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px; /* Space between text and underline */
-  width: 0;
-  height: 2px;
-  background: #c8b8a6;
-  transition: width 0.3s ease; /* Smooth animation for the underline */
+.panel:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.panel:hover h2::after {
-  width: 100%; /* Full width on hover */
-}
-
-
-
-/* Remove original button container */
-.buttonContainer {
-  display: none; /* Hide the original button container */
-}
-
-/* Timeline Section */
+/* Timeline */
 .timeline {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 20px;
-  background-color: #fff8f0; /* Soft background */
+  background-color: #fff8f0;
   position: relative;
 }
 
@@ -114,21 +108,18 @@
   align-items: center;
   justify-content: space-between;
   width: 80%;
-  margin: 40px 0; /* Add spacing between timeline items */
+  margin: 40px 0;
   position: relative;
 }
 
-/* Dot Styling */
 .timelineDot {
   width: 20px;
   height: 20px;
   background-color: #c8b8a6;
   border-radius: 50%;
-  z-index: 2; /* Ensure the dot is above the line */
-  position: relative;
+  z-index: 2;
 }
 
-/* Line Styling */
 .timelineLine {
   position: absolute;
   top: 50%;
@@ -136,11 +127,10 @@
   right: 0;
   height: 2px;
   background-color: #c8b8a6;
-  z-index: 1; /* Line behind the dots and content */
+  z-index: 1;
   transform: translateY(-50%);
 }
 
-/* Content Box Styling */
 .timelineContent {
   background-color: #ffffff;
   padding: 20px;
@@ -148,24 +138,75 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 250px;
-  z-index: 3; /* Ensure content is above the line */
+  z-index: 3;
 }
 
 .timelineContent h3 {
-  font-family: 'Dancing Script', cursive;
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #f7c9a9;
 }
 
 .timelineContent p {
   font-size: 1rem;
 }
 
-/* Alternating Layout */
 .timelineItem:nth-child(odd) {
-  flex-direction: row; /* Content on the right for odd items */
+  flex-direction: row;
 }
 
 .timelineItem:nth-child(even) {
-  flex-direction: row-reverse; /* Content on the left for even items */
+  flex-direction: row-reverse;
+}
+.calendarSection {
+  text-align: center;
+  margin: 60px auto 100px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.countdownTitle {
+  font-size: 2.5rem;
+  color: #f7c9a9;
+  margin-bottom: 10px;
+}
+
+.countdownText {
+  font-size: 1.8rem;
+  color: #c8b8a6;
+  margin-bottom: 30px;
+}
+
+.calendarBox {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 2px solid #c8b8a6;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.calendarHeader {
+  font-size: 1.5rem;
+  color: #f7c9a9;
+  margin-bottom: 10px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+  font-size: 1rem;
+  color: #c8b8a6;
+}
+
+.date {
+  padding: 6px 0;
+}
+
+.heart {
+  background-color: #f7c9a9;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
 }
