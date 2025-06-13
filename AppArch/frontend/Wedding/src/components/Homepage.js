@@ -4,7 +4,6 @@ import photo1 from './assets/photo1.jpg';
 import photo2 from './assets/photo2.jpg';
 
 const Homepage = () => {
-  const [daysLeft, setDaysLeft] = useState(0);
 
   useEffect(() => {
   }, []);

@@ -24,32 +24,12 @@ import photo20 from './assets/photo20.jpg';
 import photo21 from './assets/photo21.jpg';
 import photo22 from './assets/photo22.jpg';
 import photo23 from './assets/photo23.jpg';
-// Import all your 25 photos here...
 
 const photos = [
-  photo1,
-  photo2,
-  photo3,
-  photo4,
-  photo5,
-  photo6,
-  photo7,
-  photo8,
-  photo9,
-  photo10,
-  photo11,
-  photo12,
-  photo13,
-  photo14,
-  photo15,
-  photo16,
-  photo17,
-  photo18,
-  photo19,
-  photo20,
-  photo21,
-  photo22,
-  photo23,
+  photo1, photo2, photo3, photo4, photo5, photo6,
+  photo7, photo8, photo9, photo10, photo11, photo12,
+  photo13, photo14, photo15, photo16, photo17, photo18,
+  photo19, photo20, photo21, photo22, photo23
 ];
 
 const Gallery = ({ setLightboxOpen }) => {
@@ -57,17 +37,16 @@ const Gallery = ({ setLightboxOpen }) => {
 
   const openLightbox = (photo) => {
     setCurrentPhoto(photo);
-    setLightboxOpen(true); // Notify App to hide Navbar
+    setLightboxOpen(true);
   };
 
   const closeLightbox = () => {
     setCurrentPhoto(null);
-    setLightboxOpen(false); // Notify App to show Navbar
+    setLightboxOpen(false);
   };
 
   return (
     <div className={styles.galleryPage}>
-
       <div className={styles.galleryGrid}>
         {photos.map((photo, index) => (
           <div
@@ -75,32 +54,30 @@ const Gallery = ({ setLightboxOpen }) => {
             className={styles.galleryItem}
             onClick={() => openLightbox(photo)}
           >
-            {/* Lazy loading with 'loading="lazy"' */}
             <img
               src={photo}
-              alt={`Engagement Photo ${index + 1}`}
-              loading="lazy" // Enables lazy loading
+              alt={`Wedding moment ${index + 1}`}
+              loading="lazy"
             />
           </div>
         ))}
       </div>
 
       {currentPhoto && (
-  <div
-    className={styles.lightbox}
-    onClick={closeLightbox} // Clicking background will close
-  >
-    <img
-      src={currentPhoto}
-      alt="Enlarged Engagement Photo"
-      onClick={(e) => e.stopPropagation()} // Prevent closing when image is clicked
-    />
-    <button className={styles.closeButton} onClick={closeLightbox}>
-      &times;
-    </button>
-  </div>
-)}
-    
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+        >
+          <img
+            src={currentPhoto}
+            alt="Enlarged wedding memory"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button className={styles.closeButton} onClick={closeLightbox}>
+            &times;
+          </button>
+        </div>
+      )}
     </div>
   );
 };
