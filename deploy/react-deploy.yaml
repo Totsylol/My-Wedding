@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: wedding-web }
+spec:
+  replicas: 2
+  selector: { matchLabels: app: wedding-web }
+  template:
+    metadata: { labels: { app: wedding-web } }
+    spec:
+      containers:
+      - name: nginx
+        image: ghcr.io/totsylol/my-wedding:latest   # ← same tag CI pushes
+        imagePullPolicy: Always
+        ports: [{ containerPort: 80 }]
+---
+apiVersion: v1
+kind: Service
+metadata: { name: wedding-svc }
+spec:
+  selector: { app: wedding-web }
+  ports: [{ port: 80, targetPort: 80 }]
