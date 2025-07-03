@@ -16,7 +16,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: nginx
-          image: ghcr.io/totsylol/my-wedding:main
+          image: ghcr.io/totsylol/my-wedding:main   # <— use :main, not :latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
