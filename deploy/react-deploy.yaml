@@ -24,6 +24,11 @@ kind: Service
 metadata:
   name: wedding-svc
 spec:
+   imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: nginx
+          image: ghcr.io/totsylol/my-wedding:latest
   selector:
     app: wedding-web
   ports:
