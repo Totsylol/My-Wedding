@@ -24,6 +24,9 @@ kind: Service
 metadata:
   name: wedding-svc
 spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+
   selector:
     app: wedding-web
   ports:
