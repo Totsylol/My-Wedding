@@ -12,9 +12,11 @@ spec:
       labels:
         app: wedding-web
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
         - name: nginx
-          image: ghcr.io/totsylol/my-wedding:latest   # CI pushes this tag
+          image: ghcr.io/totsylol/my-wedding:main   # use 'main' tag which exists
           imagePullPolicy: Always
           ports:
             - containerPort: 80
@@ -24,11 +26,6 @@ kind: Service
 metadata:
   name: wedding-svc
 spec:
-   imagePullSecrets:
-        - name: ghcr-secret
-      containers:
-        - name: nginx
-          image: ghcr.io/totsylol/my-wedding:latest
   selector:
     app: wedding-web
   ports:
