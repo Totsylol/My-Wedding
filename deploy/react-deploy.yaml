@@ -12,11 +12,9 @@ spec:
       labels:
         app: wedding-web
     spec:
-      imagePullSecrets:
-        - name: ghcr-secret
       containers:
         - name: nginx
-          image: ghcr.io/totsylol/my-wedding:main   # <— use :main, not :latest
+          image: ghcr.io/totsylol/my-wedding:main
           imagePullPolicy: Always
           ports:
             - containerPort: 80
