@@ -1,29 +1,23 @@
 // src/components/OurStory.jsx
 import React from 'react';
 import styles from './styles/ourStory.module.css';
-import meetPhoto from './assets/Placeholder.jpg';         // your “How We Met” image
-import datePhoto from './assets/Placeholder.jpg';   // your “Our First Date” image
-import proposalPhoto from './assets/Placeholder.jpg'; // your “Proposal” image
+import meetPhoto from './assets/Date2.jpg';         // your “How We Met” image
+import datePhoto from './assets/Date.jpg';   // your “Our First Date” image
+import proposalPhoto from './assets/Proposal.jpg'; // your “Proposal” image
 
 const OurStory = () => {
   const stories = [
     {
       img: meetPhoto,
       alt: 'How We Met',
-      title: '💖 How We Met 💖',
-      text: 'Jonah and Hannah worked together at a boba tea shop called Chatime. It was love at first brew! 🧋💘',
-    },
-    {
-      img: datePhoto,
-      alt: 'Our First Date',
-      title: '🌹 Our First Date 🌹',
-      text: 'We strolled through the botanical gardens hand in hand, mesmerized by the blooms around us. 🌷🥂',
+      title: 'How We Met',
+      text: 'We met at Chatime, where we both worked. One evening after our shift, I asked Hannah if she’d like to catch a movie with me. On our first date, we stopped at Cold Stone for ice cream before heading to AMC to see “The Creator". Little did we know, that evening marked the beginning of our greatest adventure together.' ,
     },
     {
       img: proposalPhoto,
       alt: 'The Proposal',
-      title: '💍 The Proposal 💍',
-      text: 'Under a canopy of stars, Jonah got down on one knee…and she said “Yes”! 🌟💍',
+      title: 'The Proposal',
+      text: 'I took Hannah to our favorite beach. We sat on the sand for a while, then took a walk along the shoreline and asked a couple of people to snap our photos. As we paused for one final shot, I knelt and asked her to marry me. Afterwards, we caught the ferry and enjoyed dinner at a seafood restaurant by the harbor.',
     },
   ];
 

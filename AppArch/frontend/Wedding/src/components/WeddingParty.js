@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './styles/weddingParty.module.css';
-import bestManImg from './assets/Placeholder.jpg';
-import g1 from './assets/Placeholder.jpg';
-import g2 from './assets/Placeholder.jpg';
-import g3 from './assets/Placeholder.jpg';
-import g4 from './assets/Placeholder.jpg';
+import bestManImg from './assets/Ivan.jpg';
+import g1 from './assets/Noah.jpg';
+import g2 from './assets/Elijah.jpg';
+import g3 from './assets/Elias.jpg';
+import g4 from './assets/Kyum.jpg';
 
-import maidOfHonorImg from './assets/Placeholder.jpg';
-import b1 from './assets/Placeholder.jpg';
-import b2 from './assets/Placeholder.jpg';
-import b3 from './assets/Placeholder.jpg';
+import maidOfHonorImg from './assets/Kammie.JPG';
+import b1 from './assets/Natalie.jpg';
+import b2 from './assets/Emily.jpg';
+import b3 from './assets/Lilly.JPG';
 
 const WeddingParty = () => {
   const groomsmen = [

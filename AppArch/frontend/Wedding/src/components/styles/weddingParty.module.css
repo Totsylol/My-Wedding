@@ -70,3 +70,29 @@
     font-size: 1.4rem;
     color: #f7c9a9;
   }
+  /* 📱 Mobile styles */
+@media only screen and (max-width: 600px) {
+  .weddingPartyPage {
+    /* push content down below your navbar */
+    padding: 100px 20px 50px; 
+  }
+
+  .title {
+    /* a bit smaller & extra space on top */
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+
+  .grid {
+    gap: 20px; /* tighter bubbles */
+  }
+
+  .bubble {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bubbleContainer p {
+    font-size: 1rem;
+  }
+}

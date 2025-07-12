@@ -12,13 +12,18 @@
   text-align: center;
 }
 
+/* src/styles/ourStory.module.css */
+
 .imageContainer {
   overflow: hidden;
   border-radius: 20px;
+  max-width: 600px;       /* limit container width */
+  margin: 0 auto;         /* center it */
 }
 
 .imageContainer img {
   width: 100%;
+  max-height: 350px;      /* cap the height */
   height: auto;
   object-fit: cover;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -53,4 +58,40 @@
 .textContent p {
   font-size: 1.2rem;
   line-height: 1.6;
+}
+/* 📱 Mobile styles for Our Story */
+@media only screen and (max-width: 600px) {
+  .ourStoryPage {
+    /* push content below navbar + comfy bottom padding */
+    padding: 100px 20px 40px;
+    margin-top:40px;
+  }
+
+  .storyBlock {
+    /* tighter margins for small screens */
+    margin: 0 auto 40px;
+  }
+
+  .imageContainer {
+    /* full-width & smaller corner radius */
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .imageContainer img {
+    /* shorter on mobile */
+    max-height: 200px;
+  }
+
+  .textContent h2 {
+    /* smaller heading & extra top space */
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .textContent p {
+    /* easier to read on small screens */
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }

@@ -59,7 +59,7 @@ const Homepage = () => {
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineContent}>
             <h3>Ceremony</h3>
-            <p>3:00 PM - Join us for our vows.</p>
+            <p>3:30 PM - Join us for our vows.</p>
           </div>
         </div>
         <div className={styles.timelineItem}>
@@ -75,7 +75,7 @@ const Homepage = () => {
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineContent}>
             <h3>Reception</h3>
-            <p>5:30 PM - Dinner, dancing, and celebration.</p>
+            <p>5:00 PM - Dinner, dancing, and celebration.</p>
           </div>
         </div>
         <div className={styles.timelineItem}>
@@ -83,7 +83,7 @@ const Homepage = () => {
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineContent}>
             <h3>Farewell</h3>
-            <p>10:00 PM - Send-off as newlyweds!</p>
+            <p>9:30 PM - Send-off as newlyweds!</p>
           </div>
         </div>
       </div>

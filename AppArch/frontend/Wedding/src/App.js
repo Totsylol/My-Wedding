@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -6,9 +5,9 @@ import {
   Route
 } from 'react-router-dom';
 
-import Homepage from './components/Homepage';
-import Navbar   from './components/Navbar';
-import Footer   from './components/Footer';
+import Homepage     from './components/Homepage';
+import Navbar       from './components/Navbar';
+import Footer       from './components/Footer';
 import Gallery      from './components/Gallery';
 import WeddingParty from './components/WeddingParty';
 import OurStory     from './components/OurStory';
@@ -23,11 +22,11 @@ function App() {
         { !lightboxOpen && <Navbar /> }
 
         <Routes>
-          <Route path="/"            element={<Homepage />} />
-          <Route path="/gallery"     element={<Gallery setLightboxOpen={setLightboxOpen} />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/gallery" element={<Gallery setLightboxOpen={setLightboxOpen} />} />
           <Route path="/wedding_party" element={<WeddingParty />} />
-          <Route path="/Our Story"    element={<OurStory />} />
-          <Route path="/info"         element={<MoreInfo />} />
+          <Route path="/our-story" element={<OurStory />} />
+          <Route path="/info" element={<MoreInfo />} />
         </Routes>
 
         <Footer />

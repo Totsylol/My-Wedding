@@ -83,7 +83,7 @@ const Navbar = () => {
         <Link to="/" onClick={closeDropdown} className={styles.dropdownButton}>
           Home
         </Link>
-        <Link to="/Our Story" onClick={closeDropdown} className={styles.dropdownButton}>
+        <Link to="/our-story" onClick={closeDropdown} className={styles.dropdownButton}>
           Our Story
         </Link>
         <Link to="/wedding_party" onClick={closeDropdown} className={styles.dropdownButton}>
@@ -105,6 +105,9 @@ const Navbar = () => {
         >
           Wedding Registry
         </a>
+        <Link to="/gallery" onClick={closeDropdown} className={styles.dropdownButton}>
+          Gallery
+        </Link>
         <Link to="/info" onClick={closeDropdown} className={styles.dropdownButton}>
           More Info
         </Link>

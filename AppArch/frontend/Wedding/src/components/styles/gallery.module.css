@@ -92,3 +92,11 @@
   border: none;
   cursor: pointer;
 }
+/* 📱 Mobile styles for Gallery */
+@media only screen and (max-width: 600px) {
+  .galleryPage {
+    /* push content below navbar + comfy bottom padding */
+    margin-top: 30px;
+    padding: 100px 15px 30px; /* ↑ top padding to clear navbar */
+  }
+}

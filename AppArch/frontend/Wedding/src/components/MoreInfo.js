@@ -31,6 +31,9 @@ const MoreInfo = () => {
           <strong>Hampton Inn Shrewsbury</strong><br />
           1000 Far Hills Dr, New Freedom, PA 17349
         </p>
+        <p>
+          Please call 717-235-9898 | Reservation Name: Hannah Perry/ Jonah Palm
+        </p>
         <a
           href="https://www.hilton.com/en/hotels/swypahx-hampton-shrewsbury/?SEO_id=GMB-AMER-HX-SWYPAHX&y_source=1_MjA4MTc3MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D"
           className={styles.hotelLink}
@@ -64,7 +67,7 @@ const MoreInfo = () => {
         <h2>Adults-Only Celebration</h2>
         <p className={styles.kidNote}>
           We kindly request that our wedding be an adults-only celebration.  
-          We love your little ones, but we hope you enjoy a relaxing evening with us 💕
+          We love your little ones, but we hope you enjoy a relaxing evening with us and your loved ones.
         </p>
       </section>
     </div>
