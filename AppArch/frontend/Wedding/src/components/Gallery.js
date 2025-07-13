@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './styles/gallery.module.css';
-
+import anims from './styles/animations.module.css';
 import photo1 from './assets/photo1.jpg';
 import photo2 from './assets/photo2.jpg';
 import photo3 from './assets/photo3.jpg';
@@ -46,6 +46,7 @@ const Gallery = ({ setLightboxOpen }) => {
   };
 
   return (
+    <div className={anims.anims}>
     <div className={styles.galleryPage}>
       <div className={styles.galleryGrid}>
         {photos.map((photo, index) => (
@@ -78,6 +79,7 @@ const Gallery = ({ setLightboxOpen }) => {
           </button>
         </div>
       )}
+    </div>
     </div>
   );
 };

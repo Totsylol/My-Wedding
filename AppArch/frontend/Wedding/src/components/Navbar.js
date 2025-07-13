@@ -111,6 +111,9 @@ const Navbar = () => {
         <Link to="/info" onClick={closeDropdown} className={styles.dropdownButton}>
           More Info
         </Link>
+        <Link to="/developer" onClick={closeDropdown} className={styles.dropdownButton}>
+          Developer Extras
+        </Link>
       </div>
     </nav>
   );

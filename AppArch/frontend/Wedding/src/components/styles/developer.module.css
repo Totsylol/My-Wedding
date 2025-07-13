@@ -1,0 +1,49 @@
+.developerPage {
+    padding: 80px 20px;
+    background-color: #fff8f0;
+    font-family: 'Dancing Script', cursive;
+    color: #c8b8a6;
+    text-align: center;
+  }
+  
+  .developerPage h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f7c9a9;
+  }
+  
+  .developerPage p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .developerPage a {
+    color: #c8b8a6;
+    text-decoration: underline;
+  }
+  
+  .imageGrid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .imageWrapper {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .imageWrapper img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageWrapper figcaption {
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+  

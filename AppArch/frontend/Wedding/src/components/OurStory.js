@@ -4,7 +4,7 @@ import styles from './styles/ourStory.module.css';
 import meetPhoto from './assets/Date2.jpg';         // your “How We Met” image
 import datePhoto from './assets/Date.jpg';   // your “Our First Date” image
 import proposalPhoto from './assets/Proposal.jpg'; // your “Proposal” image
-
+import anims from './styles/animations.module.css';
 const OurStory = () => {
   const stories = [
     {
@@ -22,6 +22,7 @@ const OurStory = () => {
   ];
 
   return (
+    <div className={anims.fadeInLeft}>
     <div className={styles.ourStoryPage}>
       {stories.map(({ img, alt, title, text }, i) => (
         <section key={i} className={styles.storyBlock}>
@@ -34,6 +35,7 @@ const OurStory = () => {
           </div>
         </section>
       ))}
+    </div>
     </div>
   );
 };

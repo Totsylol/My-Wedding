@@ -12,7 +12,7 @@ import Gallery      from './components/Gallery';
 import WeddingParty from './components/WeddingParty';
 import OurStory     from './components/OurStory';
 import MoreInfo     from './components/MoreInfo';
-
+import Developer    from './components/Developer';
 function App() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
@@ -27,6 +27,7 @@ function App() {
           <Route path="/wedding_party" element={<WeddingParty />} />
           <Route path="/our-story" element={<OurStory />} />
           <Route path="/info" element={<MoreInfo />} />
+          <Route path="/developer" element={<Developer />} />
         </Routes>
 
         <Footer />

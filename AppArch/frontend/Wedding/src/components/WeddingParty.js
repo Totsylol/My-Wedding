@@ -5,7 +5,7 @@ import g1 from './assets/Noah.jpg';
 import g2 from './assets/Elijah.jpg';
 import g3 from './assets/Elias.jpg';
 import g4 from './assets/Kyum.jpg';
-
+import anims from './styles/animations.module.css';
 import maidOfHonorImg from './assets/Kammie.JPG';
 import b1 from './assets/Natalie.jpg';
 import b2 from './assets/Emily.jpg';
@@ -13,18 +13,18 @@ import b3 from './assets/Lilly.JPG';
 
 const WeddingParty = () => {
   const groomsmen = [
-    { name: 'Best Man', img: bestManImg, highlight: true },
-    { name: 'Groomsman 1', img: g1 },
-    { name: 'Groomsman 2', img: g2 },
-    { name: 'Groomsman 3', img: g3 },
-    { name: 'Groomsman 4', img: g4 },
+    { name: 'Ivan', img: bestManImg, highlight: true },
+    { name: 'Noah', img: g1 },
+    { name: 'Elijah', img: g2 },
+    { name: 'Elias', img: g3 },
+    { name: 'Kyum', img: g4 },
   ];
 
   const bridesmaids = [
-    { name: 'Maid of Honor', img: maidOfHonorImg, highlight: true },
-    { name: 'Bridesmaid 1', img: b1 },
-    { name: 'Bridesmaid 2', img: b2 },
-    { name: 'Bridesmaid 3', img: b3 },
+    { name: 'Kammie', img: maidOfHonorImg, highlight: true },
+    { name: 'Natalie', img: b1 },
+    { name: 'Emily', img: b2 },
+    { name: 'Lillianna', img: b3 },
   ];
 
   const renderParty = (title, people) => (
@@ -47,9 +47,11 @@ const WeddingParty = () => {
   );
 
   return (
+    <div className={anims.fadeInLeft}>
     <div className={styles.weddingPartyPage}>
       {renderParty('Groomsmen', groomsmen)}
       {renderParty('Bridesmaids', bridesmaids)}
+    </div>
     </div>
   );
 };

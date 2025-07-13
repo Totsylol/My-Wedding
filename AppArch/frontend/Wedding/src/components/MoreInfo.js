@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './styles/moreInfo.module.css';
 import entrancePhoto from './assets/entrance.webp'; // Replace with your image
-
+import anims from './styles/animations.module.css';
 const MoreInfo = () => {
   return (
+    <div className={anims.fadeInLeft}>
     <div className={styles.moreInfoPage}>
     
 
@@ -70,6 +71,7 @@ const MoreInfo = () => {
           We love your little ones, but we hope you enjoy a relaxing evening with us and your loved ones.
         </p>
       </section>
+    </div>
     </div>
   );
 };
