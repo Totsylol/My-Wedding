@@ -4,7 +4,7 @@ import entrancePhoto from './assets/entrance.webp'; // Replace with your image
 import anims from './styles/animations.module.css';
 const MoreInfo = () => {
   return (
-    <div className={anims.fadeInLeft}>
+    <div className={anims.fadeInDown}>
     <div className={styles.moreInfoPage}>
     
 

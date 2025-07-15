@@ -47,7 +47,7 @@ const WeddingParty = () => {
   );
 
   return (
-    <div className={anims.fadeInLeft}>
+    <div className={anims.fadeInDown}>
     <div className={styles.weddingPartyPage}>
       {renderParty('Groomsmen', groomsmen)}
       {renderParty('Bridesmaids', bridesmaids)}

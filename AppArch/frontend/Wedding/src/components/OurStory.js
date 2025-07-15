@@ -22,7 +22,7 @@ const OurStory = () => {
   ];
 
   return (
-    <div className={anims.fadeInLeft}>
+    <div className={anims.fadeInDown}>
     <div className={styles.ourStoryPage}>
       {stories.map(({ img, alt, title, text }, i) => (
         <section key={i} className={styles.storyBlock}>

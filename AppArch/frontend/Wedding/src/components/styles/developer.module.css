@@ -1,3 +1,5 @@
+/* src/components/styles/developer.module.css */
+
 .developerPage {
     padding: 80px 20px;
     background-color: #fff8f0;
@@ -6,44 +8,75 @@
     text-align: center;
   }
   
-  .developerPage h1 {
+  .title {
     font-size: 3rem;
     margin-bottom: 20px;
     color: #f7c9a9;
   }
   
-  .developerPage p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 40px;
-  }
-  
-  .developerPage a {
-    color: #c8b8a6;
-    text-decoration: underline;
-  }
-  
-  .imageGrid {
+  .developerContent {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
-  .imageWrapper {
-    max-width: 300px;
+  .textContainer {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .textContainer p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .githubButton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f7c9a9;
+    color: #fff8f0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .githubButton:hover {
+    background-color: #e5b18a;
+  }
+  
+  .imageContainer {
+    max-width: 400px;
     text-align: center;
   }
   
-  .imageWrapper img {
+  .imageContainer img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  .imageWrapper figcaption {
+  .imageContainer figcaption {
     margin-top: 8px;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    color: #c8b8a6;
+  }
+  
+  /* Responsive */
+  @media only screen and (max-width: 768px) {
+    .developerContent {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .textContainer {
+      text-align: center;
+    }
   }
   
