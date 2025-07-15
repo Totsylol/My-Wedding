@@ -26,6 +26,7 @@
   .textContainer {
     max-width: 500px;
     text-align: left;
+    color: #a8957a;
   }
   
   .textContainer p {
@@ -65,7 +66,7 @@
   .imageContainer figcaption {
     margin-top: 8px;
     font-size: 1.4rem;
-    color: #c8b8a6;
+    color: #a8957a;
   }
   
   /* Responsive */

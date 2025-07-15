@@ -12,7 +12,6 @@
   text-align: center;
 }
 
-/* src/styles/ourStory.module.css */
 
 .imageContainer {
   overflow: hidden;
@@ -31,7 +30,7 @@
 }
 
 .imageContainer img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .textContent {
@@ -39,7 +38,7 @@
 }
 
 .textContent h2 {
-  font-size: 2.8rem;
+  font-size: 4.2rem;
   margin-bottom: 10px;
   color: #f7c9a9;
   position: relative;
@@ -50,47 +49,40 @@
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #f7c9a9;
+  background-color: #a8957a;
   margin: 8px auto 0;
   border-radius: 2px;
 }
 
 .textContent p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   line-height: 1.6;
 }
-/* 📱 Mobile styles for Our Story */
 @media only screen and (max-width: 600px) {
   .ourStoryPage {
-    /* push content below navbar + comfy bottom padding */
     padding: 100px 20px 40px;
     margin-top:40px;
   }
 
   .storyBlock {
-    /* tighter margins for small screens */
     margin: 0 auto 40px;
   }
 
   .imageContainer {
-    /* full-width & smaller corner radius */
     max-width: 100%;
     border-radius: 12px;
   }
 
   .imageContainer img {
-    /* shorter on mobile */
     max-height: 300px;
   }
 
   .textContent h2 {
-    /* smaller heading & extra top space */
     font-size: 2.5rem;
     margin-top: 10px;
   }
 
   .textContent p {
-    /* easier to read on small screens */
     font-size: 1.5rem;
     line-height: 1.5;
   }
