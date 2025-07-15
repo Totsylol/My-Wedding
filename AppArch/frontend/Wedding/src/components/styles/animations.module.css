@@ -22,7 +22,7 @@
   to   { opacity: 1; transform: translateX(0); }
 }
 .fadeInLeft {
-  animation: fadeInLeft 1.2 s ease-out both;
+  animation: fadeInLeft 1.2s ease-out both;
 }
 
 /* 4) Fade In Right */
