@@ -1,5 +1,3 @@
-/* src/styles/animations.module.css */
-
 /* 1) Fade In Up (you already have this) */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(15px); }

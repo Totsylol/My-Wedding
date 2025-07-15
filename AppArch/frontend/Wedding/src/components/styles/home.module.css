@@ -35,12 +35,12 @@ body {
 }
 
 .textSection h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
 }
 
 .textSection p {
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 /* Countdown */
@@ -211,20 +211,17 @@ body {
   font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
-  /* keep two-column, just squash heights */
   .container,
   .containerSwapped {
     height: auto !important;    /* kill the 100vh */
   }
 
-  /* let the column size itself to the img, with no cap */
   .imageColumnLeft,
   .imageColumnRight {
     height: auto !important;
     max-height: none !important;
   }
 
-  /* now override the <img> itself */
   .image {
     width: auto !important;        /* don’t force 100% width */
     max-width: 100% !important;    /* but don’t overflow */
@@ -239,18 +236,16 @@ body {
     padding: 4px 8px !important;
   }
   .textSection h1 {
-    font-size: 1.8rem !important;
+    font-size: 2.7rem !important;
     margin: 2px 0 !important;
     line-height: 1.1 !important;
   }
   .textSection p {
-    font-size: 1.2rem !important;
+    font-size: 1.4rem !important;
     margin: 0 !important;
     line-height: 1.2 !important;
   }
-  /* shift the bottom (swapped) image’s focal point */
 .containerSwapped .image {
-  /* move the crop 60% from the left, vertically centered */
   object-position: 60% center;
 }
 

@@ -17,7 +17,8 @@ export default function Developer() {
             </p>
             <p>
             I host the production build on an Ubuntu Server VM under Proxmox, running an NGINX-Alpine container to serve the website build. 
-            On the right I have 3 old laptops I use as my nodes for the server. Cloudflare sits in front as a reverse proxy for my home-lab setup. Feel free to explore the full source code on GitHub :)
+            On the right I have 3 old laptops I use as my nodes for the server. Each node is connected with high availability through docker swarm. 
+            Cloudflare sits in front as a reverse proxy for my home-lab setup. Feel free to explore the full source code on GitHub :)
             </p>
             <a
               href="https://github.com/Totsylol/My-Wedding"
