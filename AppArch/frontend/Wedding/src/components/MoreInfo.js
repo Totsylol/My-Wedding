@@ -35,6 +35,9 @@ const MoreInfo = () => {
         <p>
           Please call 717-235-9898 | Reservation Name: Hannah Perry/ Jonah Palm
         </p>
+        <p>
+        Group Code: PPW
+        </p>
         <a
           href="https://www.hilton.com/en/hotels/swypahx-hampton-shrewsbury/?SEO_id=GMB-AMER-HX-SWYPAHX&y_source=1_MjA4MTc3MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D"
           className={styles.hotelLink}

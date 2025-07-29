@@ -17,7 +17,7 @@ export default function Developer() {
             </p>
             <p>
             I host the production build on an Ubuntu Server VM under Proxmox, running an NGINX-Alpine container to serve the website build/reverse proxy. 
-            On the right I have 3 old laptops I use as my nodes for the server. Each node is connected with high availability through docker swarm. 
+            Attached are the 3 old laptops I use as my nodes for the server. Each node is connected with high availability through docker swarm. 
             The domain runs through cloudflare for my home-lab setup. Feel free to explore the full source code on GitHub :)
             </p>
             <a
